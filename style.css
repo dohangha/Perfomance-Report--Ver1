@@ -1,0 +1,174 @@
+body{
+    width: 100%;
+  }
+  p{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif
+  }
+  h6{
+  font-size: 14px;
+  opacity: 70%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 300;
+  }
+
+  h5{
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 300;
+  }
+
+  h2{
+    font-size: 25px;
+    font-weight: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  #headerbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 80px;
+    background-color: #2392F1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+  #navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+  }
+
+  #navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s ease;
+  }
+
+  .proimg{
+    width: 100%;
+    height: 70px;
+    border-radius: 50%;
+  }
+
+  .span{
+    color: white;
+  }
+  /*submit img*/
+  #decor{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .submitimg{
+    height: 200px;
+    width: 70%;
+    margin: 20px auto;
+  }
+  #decor .marquee{
+    background-color: #2392F1;
+    display: block;
+    border-radius: 10px;
+    margin: auto;
+    width: 70%;
+  }
+
+  marquee{
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  #body{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.06);
+    width: 70%;
+    margin: 20px auto;
+    padding: 10px 12px;
+    background-color: #F4F5F5;
+  }
+
+  #body .loginout, .smvl{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    display: block;
+    font-size: 16px;
+    margin: 20px auto;
+    box-shadow: 15px 5px 20px rgba(0,0,0,0.06);
+  }
+
+  .task{
+    background-color: #2392F1;
+    width: 90%;
+    color: white;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    padding: 3px;
+  }
+
+  .line{
+    margin: 20px;
+  }
+
+
+
+  .production{
+    font-size: 40px;
+    color: red;
+    font-weight: 500;
+  }
+
+  #form1 {
+    float: left;
+    width: 50%;
+    padding: 0 40px;
+    margin-bottom: 20px;
+  }
+
+  /* Clear floats after the columns */
+  #container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #container #form1 input{
+    margin: 10px;
+  }
+
+  #describetask{
+    padding: 0 40px;
+    overflow: scroll;
+    display: block;
+  }
+#describetask .describeform #taskdescribe{
+    display: flex;
+    flex:1;
+  }
+  #lastlogin{
+    margin-left: 40px;
+  }
