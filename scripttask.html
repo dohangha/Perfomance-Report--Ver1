@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <?!= include('JavaScript'); ?>
+    <title>TDT Script</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <style>
+    body{
+        width: 100%;
+      }
+      p{
+        font-size: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif
+      }
+      h6{
+      font-size: 14px;
+      opacity: 70%;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: 300;
+      }
+
+      h5{
+      font-size: 16px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: 300;
+      }
+
+      h2{
+        font-size: 25px;
+        font-weight: 400;
+        font-family: Georgia, 'Times New Roman', Times, serif
+      }
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #headerbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 80px;
+        background-color: #2392F1;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+        z-index: 999;
+        position: sticky;
+        top: 0;
+        left: 0;
+      }
+      #navbar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #navbar li{
+        list-style: none;
+        padding: 0 20px;
+        position: relative;
+      }
+
+      #navbar li a{
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        transition: 0.3s ease;
+      }
+
+      .proimg{
+        width: 100%;
+        height: 70px;
+        border-radius: 50%;
+      }
+
+      .span{
+        color: white;
+      }
+      /*submit img*/
+      #decor{
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .submitimg{
+        height: 200px;
+        width: 70%;
+        margin: 20px auto;
+      }
+      #decor .marquee{
+        background-color: #2392F1;
+        display: block;
+        border-radius: 10px;
+        margin: auto;
+        width: 70%;
+      }
+
+      marquee{
+        color: white;
+        font-size: 20px;
+        padding: 10px;
+      }
+
+      #body{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.06);
+        width: 70%;
+        margin: 20px auto;
+        padding: 10px 12px;
+        background-color: #F4F5F5;
+      }
+
+      #body .loginout, .smvl{
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 10px 30px;
+        border-radius: 5px;
+        display: block;
+        font-size: 16px;
+        margin: 20px auto;
+        box-shadow: 15px 5px 20px rgba(0,0,0,0.06);
+        cursor: pointer;
+      }
+
+      .task{
+        background-color: #2392F1;
+        width: 90%;
+        color: white;
+        border-radius: 10px;
+        margin: auto;
+        text-align: center;
+        padding: 3px;
+      }
+
+      .line{
+        margin: 20px;
+      }
+
+
+
+      .production{
+        font-size: 40px;
+        color: red;
+        font-weight: 500;
+      }
+
+      #form1 {
+        float: left;
+        width: 50%;
+        padding: 0 40px;
+        margin-bottom: 20px;
+      }
+
+      /* Clear floats after the columns */
+      #container:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      #container #form1 input{
+        margin: 10px;
+      }
+
+      #describetask{
+        padding: 0 40px;
+        overflow: scroll;
+        display: block;
+      }
+    #describetask .describeform #taskdescribe1, #taskdescribe2{
+        display: flex;
+        flex:1;
+      }
+      #lastlogin{
+        margin-left: 40px;
+      }
+  </style>
+    <!---headerbar--->
+  <section id="headerbar">
+    <a href="#"> <i class="fa fa-bars" aria-hidden="true"></i> </a>
+    <div> 
+       <ul id='navbar'>
+      <li><a href='iw.html' > TW </a> </li>
+      <span class="span"> | </span>
+      <li><a href='tdt.html' class='active'>TDT</a> </li>
+      <span class="span"> | </span>
+      <li><a href='login.html'>LOGIN FORM </a> </li>
+      <span class="span"> | </span>
+      <li><a href='location.html'>MY LOCATION </a> </li>
+      <span class="span"> | </span>
+      <li><a href='team.html'> PREDICTION </a> </li>
+      <span class="span"> | </span>
+      <li><a href='time.html'> B(9:00 AM TO 6:00 PM)</a> </li>
+      <span class="span"> | </span>
+      <li><a href='position.html'> REVIEWER: LEE HONG </a> </li>
+         <a href="#" > <img class="proimg" src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt=""> </a>
+    </ul>
+    </div>
+  </section>
+  <!----decor--->
+  <section id="decor"> 
+    <img class="submitimg" src="http://www.wilkinsonpublishing.com.au/wp-content//uploads/2021/10/Stack-of-Books-illust6.png">
+    <div class="marquee">
+      <marquee>Please make sure you update your workflow name, if you are not sure which workflow to select, please reach out to your team lead.</marquee>
+    </div>
+  </section>
+  <!---resgister form-->
+  <form id="tdtform" onsubmit="handleFormSubmit(this)">
+    <section id="body"> 
+      <div> <button class="loginout"> LOGIN </button> </div>
+      <div class="task">
+        <p> Select type of task </p>
+      </div>
+      <div class="line">
+        <hr>
+        <h2> Type of Task Selected is: <span class="production"> Production </span> </h2>
+        <hr>
+      </div>
+      <div id="container"> 
+        <div id="form1">
+            <input type="radio" id="working1" name="working1" value="Production">
+            <label for="working1"> Production </label><br>
+            <input type="radio" id="working2" name="working1" value="GVC Team Meetings">
+            <label for="working2"> GVC Team Meetings </label><br>
+            <input type="radio" id="working3" name="working1" value="HR Meeting">
+            <label for="working3"> HR Meeting </label><br>
+            <input type="radio" id="working4" name="working1" value="Agency Meeting">
+            <label for="working4"> Agency Meeting </label><br>
+            <input type="radio" id="working5" name="working1" value="TL/QA Coaching">
+            <label for="working5"> TL/QA Coaching </label><br>
+            <input type="radio" id="working6" name="working1" value="Short Break (15 mins) X 2">
+            <label for="working6"> Short Break (15 mins) X 2 </label><br>
+            <input type="radio" id="working7" name="working1" value="Tool issue / Downtime">
+            <label for="working7"> Tool issue / Downtime </label><br>
+              <input type="radio" id="working8" name="working1" value="Reporting / Documentation">
+            <label for="working8"> Reporting / Documentation </label><br>
+            <input type="radio" id="working9" name="working1" value="Others (MUST specify in Task Description)">
+            <label for="working9"> Others (MUST specify in Task Description) </label><br>
+        </div>
+        <div id="form1">
+            <input type="radio" id="working1" name="working1" value="Production">
+            <label for="working1"> Production </label><br>
+            <input type="radio" id="working2" name="working1" value="GVC Team Meetings">
+            <label for="working2"> GVC Team Meetings </label><br>
+            <input type="radio" id="working3" name="working1" value="HR Meeting">
+            <label for="working3"> HR Meeting </label><br>
+            <input type="radio" id="working4" name="working1" value="Agency Meeting">
+            <label for="working4"> Agency Meeting </label><br>
+            <input type="radio" id="working5" name="working1" value="TL/QA Coaching">
+            <label for="working5"> TL/QA Coaching </label><br>
+            <input type="radio" id="working6" name="working1" value="Short Break (15 mins) X 2">
+            <label for="working6"> Short Break (15 mins) X 2 </label><br>
+            <input type="radio" id="working7" name="working1" value="Tool issue / Downtime">
+            <label for="working7"> Tool issue / Downtime </label><br>
+            <input type="radio" id="working8" name="working1" value="Reporting / Documentation">
+            <label for="working8"> Reporting / Documentation </label><br>
+            <input type="radio" id="working9" name="working1" value="Others (MUST specify in Task Description)">
+            <label for="working9"> Others (MUST specify in Task Description) </label><br>   
+        </div>
+      </div>
+      <div class="task">
+        <p> Task/Issue/Productivity Description </p>
+      </div>
+      <div class="line">
+        <h2>Volume Completed is </h2>
+      </div>
+      <div id="describetask">
+        <div class="describeform">
+          <h6><label for="taskdescribe1">Productivity number </label></h6>
+          <textarea id="taskdescribe1" name="taskdescribe1" rows="2" cols="108%"></textarea>
+          <h6><label for="taskdescribe2">Description if any (e.g screenshot or comment) </label></h6>
+          <textarea id="taskdescribe2" name="taskdescribe2" rows="2" cols="108%"></textarea>
+        </div>
+      </div>
+      <button type="submit" class="smvl">SUBMIT THE TOTAL VOLUME</button>
+      <h5 id="lastlogin">(Last Login at: 2023-03-23 08:56) | (Last Logout at: 2023-03-22 18:01)</h5>
+      <div id="output"></div>
+    </section>
+  </form>
+  <script>
+    let url="https://script.google.com/a/macros/google.com/s/AKfycbzV9iwm4OCwuOve0Dm7WAATW9MwjmaSWGZ_MIkPT2hM9GH9g1y9t_4y7nmawj9A3JQ7/exec";
+    let form=document.querySelector("#tdtform");
+    let submit=document.querySelector(".smvl");
+    let volume=document.querySelector("#taskdescribe1");
+    let screenshot=document.querySelector("#taskdescribe2");
+    form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            submit.value = "submitting.."
+            fetch(url, {
+                    method: "POST",
+                    body: new FormData(form)
+                })
+                .then(res => res.text())
+                .then(data => {
+                    message.innerHTML = data;
+                    submit.value = "submit"
+ 
+                })
+                .catch(err => {
+                    message.innerHTML = err;
+                    submit.value = "submit"
+                })
+    })
+  </script>
+</body>
+</html>
+
