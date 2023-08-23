@@ -197,15 +197,15 @@
       <span class="span"> | </span>
       <li><a href='tdt.html' class='active'>TDT</a> </li>
       <span class="span"> | </span>
-      <li><a href='login.html'>LOGIN FORM </a> </li>
+      <li><a href='login.html'> DEVELOPER </a> </li>
       <span class="span"> | </span>
       <li><a href='location.html'>MY LOCATION </a> </li>
       <span class="span"> | </span>
-      <li><a href='team.html'> PREDICTION </a> </li>
+      <li><a href='team.html'> MY TEAM </a> </li>
       <span class="span"> | </span>
-      <li><a href='time.html'> B(9:00 AM TO 6:00 PM)</a> </li>
+      <li><a href='time.html'> MY TIME (9:00 AM TO 6:00 PM)</a> </li>
       <span class="span"> | </span>
-      <li><a href='position.html'> REVIEWER: LEE HONG </a> </li>
+      <li><a href='position.html'> LEE HONG </a> </li>
          <a href="#" > <img class="proimg" src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt=""> </a>
     </ul>
     </div>
@@ -220,62 +220,67 @@
   <!---resgister form-->
   <form id="tdtform" onsubmit="handleFormSubmit(this)">
     <section id="body"> 
-      <div> <button class="loginout"> LOGIN </button> </div>
+      <div class="form-row justify-content-center">
+      <div class="form-group col-align-self-center">
+      <input type="button" value="Log In" id="login" class="btn btn-primary" onclick="LogIn()" />
+      <input type="button" value="Log Out" id="logout" class="btn btn-primary" onclick="LogOut()" /><br><br>
+      </div>
+      </div> 
       <div class="task">
         <p> Select type of task </p>
       </div>
       <div class="line">
         <hr>
-        <h2> Type of Task Selected is: <span class="production"> Production </span> </h2>
+        <h2> Your Department is: <span class="production"> Your Department </span> </h2>
         <hr>
       </div>
       <div id="container"> 
         <div id="form1">
-            <input type="radio" id="working1" name="working1" value="Production">
-            <label for="working1"> Production </label><br>
-            <input type="radio" id="working2" name="working1" value="GVC Team Meetings">
-            <label for="working2"> GVC Team Meetings </label><br>
-            <input type="radio" id="working3" name="working1" value="HR Meeting">
-            <label for="working3"> HR Meeting </label><br>
-            <input type="radio" id="working4" name="working1" value="Agency Meeting">
-            <label for="working4"> Agency Meeting </label><br>
-            <input type="radio" id="working5" name="working1" value="TL/QA Coaching">
-            <label for="working5"> TL/QA Coaching </label><br>
-            <input type="radio" id="working6" name="working1" value="Short Break (15 mins) X 2">
-            <label for="working6"> Short Break (15 mins) X 2 </label><br>
-            <input type="radio" id="working7" name="working1" value="Tool issue / Downtime">
-            <label for="working7"> Tool issue / Downtime </label><br>
-              <input type="radio" id="working8" name="working1" value="Reporting / Documentation">
-            <label for="working8"> Reporting / Documentation </label><br>
+            <input type="radio" id="working1" name="working1" value="Product Development">
+            <label for="working1"> Product Development</label><br>
+            <input type="radio" id="working2" name="working1" value="HR Team">
+            <label for="working2"> HR Team </label><br>
+            <input type="radio" id="working3" name="working1" value="Marketing">
+            <label for="working3"> Marketing </label><br>
+            <input type="radio" id="working4" name="working1" value="Client Management">
+            <label for="working4"> Client Management </label><br>
+            <input type="radio" id="working5" name="working1" value="Developer Team">
+            <label for="working5"> Developer Team </label><br>
+            <input type="radio" id="working6" name="working1" value="Finance Team">
+            <label for="working6"> Finance Team </label><br>
+            <input type="radio" id="working7" name="working1" value="UI/UX/Designer">
+            <label for="working7"> UI/UX/Designer </label><br>
+              <input type="radio" id="working8" name="working1" value="Operations Management">
+            <label for="working8"> Operations Management </label><br>
             <input type="radio" id="working9" name="working1" value="Others (MUST specify in Task Description)">
             <label for="working9"> Others (MUST specify in Task Description) </label><br>
         </div>
         <div id="form1">
-            <input type="radio" id="working1" name="working1" value="Production">
-            <label for="working1"> Production </label><br>
-            <input type="radio" id="working2" name="working1" value="GVC Team Meetings">
-            <label for="working2"> GVC Team Meetings </label><br>
-            <input type="radio" id="working3" name="working1" value="HR Meeting">
-            <label for="working3"> HR Meeting </label><br>
-            <input type="radio" id="working4" name="working1" value="Agency Meeting">
-            <label for="working4"> Agency Meeting </label><br>
-            <input type="radio" id="working5" name="working1" value="TL/QA Coaching">
-            <label for="working5"> TL/QA Coaching </label><br>
-            <input type="radio" id="working6" name="working1" value="Short Break (15 mins) X 2">
-            <label for="working6"> Short Break (15 mins) X 2 </label><br>
-            <input type="radio" id="working7" name="working1" value="Tool issue / Downtime">
-            <label for="working7"> Tool issue / Downtime </label><br>
+            <input type="radio" id="working1" name="working1" value="Sales Team">
+            <label for="working1"> Sales Team </label><br>
+            <input type="radio" id="working2" name="working1" value="Purchasing Team">
+            <label for="working2"> Purchasing Team </label><br>
+            <input type="radio" id="working3" name="working1" value="Research">
+            <label for="working3"> Research/ Data/Risk Management </label><br>
+            <input type="radio" id="working4" name="working1" value="Accounting">
+            <label for="working4"> Accounting </label><br>
+            <input type="radio" id="working5" name="working1" value="Administrative">
+            <label for="working5"> Administrative </label><br>
+            <input type="radio" id="working6" name="working1" value="Customer Service">
+            <label for="working6"> Customer Service </label><br>
+            <input type="radio" id="working7" name="working1" value="PR Team">
+            <label for="working7"> PR Team </label><br>
             <input type="radio" id="working8" name="working1" value="Reporting / Documentation">
             <label for="working8"> Reporting / Documentation </label><br>
-            <input type="radio" id="working9" name="working1" value="Others (MUST specify in Task Description)">
-            <label for="working9"> Others (MUST specify in Task Description) </label><br>   
+            <input type="radio" id="working9" name="working1" value="Legal Team">
+            <label for="working9"> Legal Team </label><br>   
         </div>
       </div>
       <div class="task">
         <p> Task/Issue/Productivity Description </p>
       </div>
       <div class="line">
-        <h2>Volume Completed is </h2>
+        <h2>Your Tasks Completed is </h2>
       </div>
       <div id="describetask">
         <div class="describeform">
@@ -286,11 +291,111 @@
         </div>
       </div>
       <button type="submit" class="smvl">SUBMIT THE TOTAL VOLUME</button>
-      <h5 id="lastlogin">(Last Login at: 2023-03-23 08:56) | (Last Logout at: 2023-03-22 18:01)</h5>
+      <div class="alert alert-primary" role="alert" id="message"> </div>
       <div id="output"></div>
     </section>
   </form>
   <script>
+    $( document ).ready(function() {
+      getName();
+    });
+    
+    function getName() 
+    {
+    
+    google.script.run.withSuccessHandler(function(ar) 
+    {
+    var nameSelect = document.getElementById("name");
+    console.log(ar);
+    
+    let option = document.createElement("option");
+    option.value = "";
+    option.text = "";
+    nameSelect.appendChild(option);
+    
+    ar.forEach(function(item, index) 
+    {    
+      let option = document.createElement("option");
+      var name = item[0];
+      option.value = item[0];
+      option.text = item[0];
+      nameSelect.appendChild(option);    
+    });
+    }).getName();
+    
+    };
+    
+    function LogIn()
+    {
+    
+    $('#message').html("");
+    var name = document.getElementById("name").value;
+    
+    if(name != '')
+    {
+    
+    google.script.run.withSuccessHandler(function(ar) 
+    {
+     console.log(ar);
+    ar.forEach(function(item, index) 
+    {
+    
+    if(item[0] == 'SUCCESS')
+    {
+    var message = item[2] + ' Logged in at ' + item[1];
+    $('#message').html(message);
+    document.getElementById("message").className = "alert alert-primary";
+    }
+    else
+    {
+    var message = item[2] + ' ' + item[0];
+    $('#message').html(message);
+    document.getElementById("message").className = "alert alert-warning"; 
+    }
+    
+     
+    });
+    
+    }).logIn(name);
+    
+    }
+    }
+    
+    function LogOut()
+    {
+    
+    $('#message').html("");
+    var name = document.getElementById("name").value;
+    
+    if(name != '')
+    {
+    
+    google.script.run.withSuccessHandler(function(ar) 
+    {
+    console.log(ar);
+    ar.forEach(function(item, index) 
+    {
+    
+    if(item[0] == 'SUCCESS')
+    {
+    var message = item[2] + ' Logged out at ' + item[1];
+    $('#message').html(message);
+    document.getElementById("message").className = "alert alert-primary";
+    }
+    else
+    {
+    var message = item[2] + ' ' + item[0];
+    $('#message').html(message);
+    document.getElementById("message").className = "alert alert-warning"; 
+    }
+        
+    });
+    
+    }).logOut(name);
+    
+    }
+    }
+
     let url="https://script.google.com/a/macros/google.com/s/AKfycbzV9iwm4OCwuOve0Dm7WAATW9MwjmaSWGZ_MIkPT2hM9GH9g1y9t_4y7nmawj9A3JQ7/exec";
     let form=document.querySelector("#tdtform");
     let submit=document.querySelector(".smvl");
