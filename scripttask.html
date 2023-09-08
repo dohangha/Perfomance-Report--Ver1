@@ -1,17 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <?!= include('JavaScript'); ?>
-    <title>TDT Script</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-  <style>
+<html>
+  <head>
+    <base target="_top">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>   
+
+    <style>
     body{
         width: 100%;
       }
@@ -157,7 +152,7 @@
         font-weight: 500;
       }
 
-      #form1 {
+      #form1, #describeinfo {
         float: left;
         width: 50%;
         padding: 0 40px;
@@ -188,30 +183,9 @@
         margin-left: 40px;
       }
   </style>
-    <!---headerbar--->
-  <section id="headerbar">
-    <a href="#"> <i class="fa fa-bars" aria-hidden="true"></i> </a>
-    <div> 
-       <ul id='navbar'>
-      <li><a href='iw.html' > TW </a> </li>
-      <span class="span"> | </span>
-      <li><a href='tdt.html' class='active'>TDT</a> </li>
-      <span class="span"> | </span>
-      <li><a href='login.html'> DEVELOPER </a> </li>
-      <span class="span"> | </span>
-      <li><a href='location.html'>MY LOCATION </a> </li>
-      <span class="span"> | </span>
-      <li><a href='team.html'> MY TEAM </a> </li>
-      <span class="span"> | </span>
-      <li><a href='time.html'> MY TIME (9:00 AM TO 6:00 PM)</a> </li>
-      <span class="span"> | </span>
-      <li><a href='position.html'> LEE HONG </a> </li>
-         <a href="#" > <img class="proimg" src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt=""> </a>
-    </ul>
-    </div>
-  </section>
-  <!----decor--->
-  <section id="decor"> 
+  </head>
+  <body>
+   <section id="decor"> 
     <img class="submitimg" src="http://www.wilkinsonpublishing.com.au/wp-content//uploads/2021/10/Stack-of-Books-illust6.png">
     <div class="marquee">
       <marquee>Please make sure you update your workflow name, if you are not sure which workflow to select, please reach out to your team lead.</marquee>
@@ -220,15 +194,23 @@
   <!---resgister form-->
   <form id="tdtform" onsubmit="handleFormSubmit(this)">
     <section id="body"> 
-      <div class="form-row justify-content-center">
-      <div class="form-group col-align-self-center">
-      <input type="button" value="Log In" id="login" class="btn btn-primary" onclick="LogIn()" />
-      <input type="button" value="Log Out" id="logout" class="btn btn-primary" onclick="LogOut()" /><br><br>
-      </div>
-      </div> 
-      <div class="task">
-        <p> Select type of task </p>
-      </div>
+      <div class="line">
+          <h2>Your Information is: <span class="production"> Your Information </span> </h2>
+        </div>
+        <div>
+          <div id="describeinfo">
+              <h6><label for="employee"> Your Name </label></h6>
+              <select class="form-control" id="employee" name="employee"></select>
+              <h6><label for="location"> Your Location </label></h6>
+              <select class="form-control" id="location" name="location"></select>
+          </div>
+          <div id="describeinfo">
+              <h6><label for="position"> Your Position </label></h6>
+              <select class="form-control" id="position" name="position"></select>
+              <h6><label for="shift"> Your Shift </label></h6>
+              <select class="form-control" id="shift" name="shift"></select>
+          </div>
+        </div>
       <div class="line">
         <hr>
         <h2> Your Department is: <span class="production"> Your Department </span> </h2>
@@ -291,110 +273,10 @@
         </div>
       </div>
       <button type="submit" class="smvl">SUBMIT THE TOTAL VOLUME</button>
-      <div class="alert alert-primary" role="alert" id="message"> </div>
       <div id="output"></div>
     </section>
   </form>
-  <script>
-    $( document ).ready(function() {
-      getName();
-    });
-    
-    function getName() 
-    {
-    
-    google.script.run.withSuccessHandler(function(ar) 
-    {
-    var nameSelect = document.getElementById("name");
-    console.log(ar);
-    
-    let option = document.createElement("option");
-    option.value = "";
-    option.text = "";
-    nameSelect.appendChild(option);
-    
-    ar.forEach(function(item, index) 
-    {    
-      let option = document.createElement("option");
-      var name = item[0];
-      option.value = item[0];
-      option.text = item[0];
-      nameSelect.appendChild(option);    
-    });
-    }).getName();
-    
-    };
-    
-    function LogIn()
-    {
-    
-    $('#message').html("");
-    var name = document.getElementById("name").value;
-    
-    if(name != '')
-    {
-    
-    google.script.run.withSuccessHandler(function(ar) 
-    {
-     console.log(ar);
-    ar.forEach(function(item, index) 
-    {
-    
-    if(item[0] == 'SUCCESS')
-    {
-    var message = item[2] + ' Logged in at ' + item[1];
-    $('#message').html(message);
-    document.getElementById("message").className = "alert alert-primary";
-    }
-    else
-    {
-    var message = item[2] + ' ' + item[0];
-    $('#message').html(message);
-    document.getElementById("message").className = "alert alert-warning"; 
-    }
-    
-     
-    });
-    
-    }).logIn(name);
-    
-    }
-    }
-    
-    function LogOut()
-    {
-    
-    $('#message').html("");
-    var name = document.getElementById("name").value;
-    
-    if(name != '')
-    {
-    
-    google.script.run.withSuccessHandler(function(ar) 
-    {
-    console.log(ar);
-    ar.forEach(function(item, index) 
-    {
-    
-    if(item[0] == 'SUCCESS')
-    {
-    var message = item[2] + ' Logged out at ' + item[1];
-    $('#message').html(message);
-    document.getElementById("message").className = "alert alert-primary";
-    }
-    else
-    {
-    var message = item[2] + ' ' + item[0];
-    $('#message').html(message);
-    document.getElementById("message").className = "alert alert-warning"; 
-    }
-        
-    });
-    
-    }).logOut(name);
-    
-    }
-    }
+    <script>
 
     let url="https://script.google.com/a/macros/google.com/s/AKfycbzV9iwm4OCwuOve0Dm7WAATW9MwjmaSWGZ_MIkPT2hM9GH9g1y9t_4y7nmawj9A3JQ7/exec";
     let form=document.querySelector("#tdtform");
@@ -419,7 +301,125 @@
                     submit.value = "submit"
                 })
     })
-  </script>
-</body>
-</html>
 
+    function preventFormSubmit(){
+      var forms=document.querySelectorAll('tdtform');
+      for (var i=0;i<forms.length;i++){
+        forms[i].addEventListener('submit',function(event){
+          event.preventDefault();
+        });
+      }
+    };
+
+  document.addEventListener('DOMContentLoaded',preventFormSubmit);
+
+  function handleFormSubmit(formObject){
+    google.script.run.processForm(formObject);
+    document.getElementById('tdtform').reset();
+  }   
+
+
+
+
+
+
+     $( document ).ready(function() {
+      getEmployees();
+      getLocation();
+      getPosition();
+      getShift();
+    });
+    
+    function getEmployees() {
+    
+      google.script.run.withSuccessHandler(function(ar) {
+      var employeeSelect = document.getElementById("employee");
+      console.log(ar);
+      
+      let option = document.createElement("option");
+      option.value = "";
+      option.text = "";
+      employeeSelect.appendChild(option);
+      
+      ar.forEach(function(item, index) {    
+        let option = document.createElement("option");
+        var employee = item[0];
+        option.value = item[0];
+        option.text = item[0];
+        employeeSelect.appendChild(option);    
+    });
+    }).getEmployees();
+    
+    };
+
+    function getLocation() {
+    
+      google.script.run.withSuccessHandler(function(ar) {
+      var locationSelect = document.getElementById("location");
+      console.log(ar);
+      
+      let option = document.createElement("option");
+      option.value = "";
+      option.text = "";
+      locationSelect.appendChild(option);
+      
+      ar.forEach(function(item, index) {    
+        let option = document.createElement("option");
+        var location = item[0];
+        option.value = item[0];
+        option.text = item[0];
+        locationSelect.appendChild(option);    
+    });
+    }).getLocation();
+    
+    };
+
+    function getPosition() {
+    
+      google.script.run.withSuccessHandler(function(ar) {
+      var positionSelect = document.getElementById("position");
+      console.log(ar);
+      
+      let option = document.createElement("option");
+      option.value = "";
+      option.text = "";
+      positionSelect.appendChild(option);
+      
+      ar.forEach(function(item, index) {    
+        let option = document.createElement("option");
+        var position = item[0];
+        option.value = item[0];
+        option.text = item[0];
+        positionSelect.appendChild(option);    
+    });
+    }).getPosition();
+    
+    };
+
+    function getShift() {
+    
+      google.script.run.withSuccessHandler(function(ar) {
+      var shiftSelect = document.getElementById("shift");
+      console.log(ar);
+      
+      let option = document.createElement("option");
+      option.value = "";
+      option.text = "";
+      shiftSelect.appendChild(option);
+      
+      ar.forEach(function(item, index) {    
+        let option = document.createElement("option");
+        var shift = item[0];
+        option.value = item[0];
+        option.text = item[0];
+        shiftSelect.appendChild(option);    
+    });
+    }).getShift();
+    
+    };
+
+
+  
+    </script>
+  </body>
+</html>
