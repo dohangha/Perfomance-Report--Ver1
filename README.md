@@ -31,10 +31,9 @@ Excel file
 - Data sheet
 ![image](https://github.com/dohangha/Perfomance-Report/assets/108347421/902e21e8-18ca-41ad-ae91-7dfbff7d03ea)
 
-- Employee & Location sheet
+- Employee sheet
 ![image](https://github.com/dohangha/Perfomance-Report/assets/108347421/78af6c00-99d6-494a-bbd4-c51a4a34134d)
 
-![image](https://github.com/dohangha/Perfomance-Report/assets/108347421/b08bee1d-5349-417f-a8e6-f87f3598ca7b)
 
 
 
