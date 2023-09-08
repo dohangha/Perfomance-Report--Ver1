@@ -23,13 +23,18 @@ Version 1 is created in case the company wants to update staff information via E
 - Scripttask.html to visualize the report
 
 ## Result
-Script file 
+Script design
 ![image](https://github.com/dohangha/Perfomance-Report/assets/108347421/4579c14c-07f3-4898-b46b-12cf20711851)
 
 
 Excel file 
+- Data sheet
 ![image](https://github.com/dohangha/Perfomance-Report/assets/108347421/902e21e8-18ca-41ad-ae91-7dfbff7d03ea)
+
+- Employee sheet
 ![image](https://github.com/dohangha/Perfomance-Report/assets/108347421/78af6c00-99d6-494a-bbd4-c51a4a34134d)
+
+- Location sheet
 ![image](https://github.com/dohangha/Perfomance-Report/assets/108347421/b08bee1d-5349-417f-a8e6-f87f3598ca7b)
 
 
